@@ -32,16 +32,15 @@ password : 1234
 
 
 ex)
-
+```
 {
-
     "access_token": "c1e31348-d198-4665-a8f7-b20811a9b450",
     "token_type": "bearer",
     "refresh_token": "97ddbc2b-d637-4a09-9d08-ecb626643767",
     "expires_in": 999,
-    "scope": "read write"
-    
+    "scope": "read write" 
 }
+```
 
 ### grant_type : refresh_token
 UserDetailsService is required. //없어서
@@ -53,7 +52,9 @@ HomeController GET /user
 return "user"
 
 config
+```
 .antMatchers("/user/**").authenticated();
+```
 
 HTTP header Authorization : Bearer 576790cf-5800-4284-9fd3-0de300c2d2d6 (access token)
 
