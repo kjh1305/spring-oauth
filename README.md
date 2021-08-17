@@ -12,8 +12,11 @@ auth.inMemoryAuthentication()
 .roles("USER");
 ```
 HTTP body 
+
 username : user
+
 password : 1234
+
 grant_type : password
 
 # POST /oauth/token
@@ -26,10 +29,13 @@ grant_type : password
 ```
 
 HTTP header Authorization : Basic dGVzdDp0ZXN0
+
 dGVzdDp0ZXN0 = base64 (test:test) 
 
 grant_type : password
+
 username : user
+
 password : 1234
 
 
@@ -51,6 +57,7 @@ UserDetailsService is required. //없어서
 ## ResourceServer
 
 HomeController GET /user
+
 return "user"
 
 config
