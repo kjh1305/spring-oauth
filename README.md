@@ -4,15 +4,13 @@
 ## configure
 
 passwordEncoder 주의
-{
+```
 auth.inMemoryAuthentication()
 .passwordEncoder(passwordEncoder)
 .withUser("user")
 .password(passwordEncoder().encode("1234")) //인코더 후
 .roles("USER");
-}
-
-
+```
 HTTP body 
 username : user
 password : 1234
