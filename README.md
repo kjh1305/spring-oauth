@@ -50,7 +50,7 @@ config
 
 HTTP header Authorization : Bearer 576790cf-5800-4284-9fd3-0de300c2d2d6 (access token)
 
-
+# 
 /oauth/token   //토큰발급
  
 /oauth/token_key
