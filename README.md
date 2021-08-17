@@ -11,7 +11,7 @@ auth.inMemoryAuthentication()
 .password(passwordEncoder().encode("1234")) //인코더 후
 .roles("USER");
 ```
-HTTP body 
+### HTTP body 
 
 username : user
 
@@ -28,7 +28,7 @@ grant_type : password
 .authorizedGrantTypes("refresh_token", "password")
 ```
 
-HTTP header Authorization : Basic dGVzdDp0ZXN0
+### HTTP header Authorization : Basic dGVzdDp0ZXN0
 
 dGVzdDp0ZXN0 = base64 (test:test) 
 
@@ -65,7 +65,7 @@ config
 .antMatchers("/user/**").authenticated();
 ```
 
-HTTP header Authorization : Bearer 576790cf-5800-4284-9fd3-0de300c2d2d6 (access token)
+### HTTP header Authorization : Bearer 576790cf-5800-4284-9fd3-0de300c2d2d6 (access token)
 
 # '/oauth'
 /oauth/token   //토큰발급
