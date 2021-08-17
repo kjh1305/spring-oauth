@@ -18,10 +18,12 @@ grant_type : password
 
 # POST /oauth/token
 ## AuthorizationServer
+```
 .withClient("test")
 .secret("{noop}test")
 .authorities("ROLE_USER")
 .authorizedGrantTypes("refresh_token", "password")
+```
 
 HTTP header Authorization : Basic dGVzdDp0ZXN0
 dGVzdDp0ZXN0 = base64 (test:test) 
