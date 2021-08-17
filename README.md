@@ -39,6 +39,9 @@ ex)
     "scope": "read write"
 }
 
+### grant_type : refresh_token
+UserDetailsService is required. //없어서
+
 # GET /user
 ## ResourceServer
 
