@@ -69,10 +69,12 @@ config
 ### HTTP header 
 Authorization : Bearer 576790cf-5800-4284-9fd3-0de300c2d2d6 (access token)
 
-# '/oauth'
-/oauth/token   //토큰발급
- 
-/oauth/token_key
-
-/oauth/check_token
+# Endpoint
+```
+Authorization Endpoint (권한 부여) : /oauth/authorize
+Token Endpoint (토큰 발급) : /oauth/token
+Approval Endpoint (승인...) : /oauth/confirm_access
+Check Token Endpoint (토큰 유효 체크) : /oauth/check_token
+JWT Sign key Endpoint (JWT 서명 키) : /oauth/token_key
+```
 
