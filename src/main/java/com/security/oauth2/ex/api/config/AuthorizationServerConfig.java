@@ -37,14 +37,17 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
 
     @Override
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
-        /*clients.inMemory()
+        /* inMemory 방식
+        clients.inMemory()
                 .withClient("test")
                 .secret("{noop}test")
                 .authorities("ROLE_USER")
                 .authorizedGrantTypes("refresh_token", "password")
                 .scopes("read", "write")
                 .accessTokenValiditySeconds(1000)
-                .refreshTokenValiditySeconds(30000);*/
+                .refreshTokenValiditySeconds(30000);
+                */
+        /* Database 방식 */
         clients.jdbc(dataSource);
     }
 
