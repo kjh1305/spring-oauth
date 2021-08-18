@@ -16,14 +16,15 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 public class WebConfig extends WebSecurityConfigurerAdapter {
 
     @Autowired
-    PasswordEncoder passwordEncoder;
+    private PasswordEncoder passwordEncoder;
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.inMemoryAuthentication()
                 .passwordEncoder(passwordEncoder)
                 .withUser("user")
-                .password(passwordEncoder().encode("1234"))
+//                .password(passwordEncoder().encode("1234"))
+                .password("{noop}1234")
                 .roles("USER");
     }
 

@@ -49,3 +49,15 @@ create table test.oauth_approvals (
                                       expiresAt TIMESTAMP,
                                       lastModifiedAt TIMESTAMP
 );
+
+
+
+INSERT INTO test.oauth_client_details(client_id, client_secret, scope, authorized_grant_types, authorities, access_token_validity, refresh_token_validity, autoapprove) VALUES("test", "test", "read,write", "refresh_token,password", "CLIENT", 1000, 30000, 1)
+
+create table test.user(
+                          id integer primary key auto_increment,
+                          userId VARCHAR(256) not null ,
+                          password VARCHAR(256) not null
+);
+
+INSERT INTO test.user(userId, password) VALUES("test", "{noop}1234")
